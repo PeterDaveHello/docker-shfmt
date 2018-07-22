@@ -12,6 +12,5 @@ RUN apk add --no-cache git \
       && git -C "$GOPATH/src/mvdan.cc/sh" checkout -q "v$SHFMT_VERSION" \
       && go install -a -ldflags '-extldflags "-static"' mvdan.cc/sh/cmd/shfmt
 
-FROM scratch
-COPY --from=0 /go/bin/shfmt /shfmt
-ENTRYPOINT ["/shfmt"]
+FROM busybox:1
+COPY --from=0 /go/bin/shfmt /bin/shfmt
