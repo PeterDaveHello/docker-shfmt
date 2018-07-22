@@ -24,6 +24,6 @@ jobs:
       language: generic
       script:
         - docker build -t peterdavehello-shfmt-test .
-        - docker run --rm -it peterdavehello-shfmt-test -version
+        - docker run --rm -it peterdavehello-shfmt-test shfmt -version
       services:
         - docker
