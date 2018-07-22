@@ -1,11 +1,11 @@
 FROM golang:alpine
 
 LABEL name="shfmt"
-LABEL version="2.5.0"
+LABEL version="2.2.1"
 
 ENV GOOS linux
 ENV CGO_ENABLED 0
-ENV SHFMT_VERSION 2.5.0
+ENV SHFMT_VERSION 2.2.1
 
 RUN apk add --no-cache git \
       && go get -u mvdan.cc/sh/cmd/shfmt \
