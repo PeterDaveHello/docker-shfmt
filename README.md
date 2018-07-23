@@ -12,11 +12,13 @@ Dockerized [shfmt](https://github.com/mvdan/sh#shfmt) shell script formatter.
 Run Docker container using [peterdavehello/shfmt](https://hub.docker.com/r/peterdavehello/shfmt) image:
 
 ```sh
-docker run --rm -it -v /path/of/scripts:/path/in/docker peterdavehello/shfmt shfmt --version
+docker run --rm -it -v /path/of/scripts:/path/in/docker peterdavehello/shfmt:2.5.0 shfmt --version
 ```
 
-Don't forget to replave `--version` with the parameters you want, for example:
+Replace `--version` with the parameters you want, for example:
 
 ```sh
-docker run --rm -it -v "$(pwd)":/scripts peterdavehello/shfmt shfmt -sr -i 2 -w -ci /scripts
+docker run --rm -it -v "$(pwd)":/scripts peterdavehello/shfmt:2.5.0 shfmt -sr -i 2 -d -ci /scripts
 ```
+
+Don't forget to replace `2.5.0` with the latest tag or the tagged version you want.
