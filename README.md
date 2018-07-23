@@ -5,6 +5,8 @@
 [![Docker image size & layers](https://images.microbadger.com/badges/image/peterdavehello/shfmt.svg)](https://microbadger.com/images/peterdavehello/shfmt/)
 [![Docker image version](https://images.microbadger.com/badges/version/peterdavehello/shfmt.svg)](https://hub.docker.com/r/peterdavehello/shfmt/tags/)
 
+[![Docker Hub badge](https://dockeri.co/image/peterdavehello/shfmt)](https://hub.docker.com/r/peterdavehello/shfmt/)
+
 Dockerized [shfmt](https://github.com/mvdan/sh#shfmt) shell script formatter.
 
 ## Usage
