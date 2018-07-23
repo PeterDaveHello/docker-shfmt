@@ -9,6 +9,8 @@ Dockerized [shfmt](https://github.com/mvdan/sh#shfmt) shell script formatter.
 
 ## Usage
 
+### Command line
+
 Run Docker container using [peterdavehello/shfmt](https://hub.docker.com/r/peterdavehello/shfmt) image:
 
 ```sh
@@ -22,3 +24,17 @@ docker run --rm -it -v "$(pwd)":/scripts peterdavehello/shfmt:2.5.0 shfmt -sr -i
 ```
 
 Don't forget to replace `2.5.0` with the latest tag or the tagged version you want.
+
+### GitLab CI example
+
+```yaml
+shfmt:
+  stage: test
+  image: peterdavehello/shfmt:2.5.0
+  before_script:
+    - shfmt -version
+  script:
+    - shfmt -sr -i 2 -d -ci .
+  tags:
+    - docker
+```
