@@ -1,13 +1,16 @@
+ARG SHFMT_VERSION=3.3.0
+
 FROM golang:alpine
 
 ARG GOOS=linux
 ARG CGO_ENABLED=0
 ARG GO111MODULE=on
-ARG SHFMT_VERSION=3.3.0
+ARG SHFMT_VERSION
 
 RUN go get -u mvdan.cc/sh/v3/cmd/shfmt@v${SHFMT_VERSION}
 
 FROM busybox:1
+ARG SHFMT_VERSION
 LABEL name="shfmt"
-LABEL version="3.3.0"
+LABEL version="$SHFMT_VERSION"
 COPY --from=0 /go/bin/shfmt /bin/shfmt
