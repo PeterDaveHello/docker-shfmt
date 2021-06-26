@@ -9,6 +9,8 @@
 
 Dockerized [shfmt](https://github.com/mvdan/sh#shfmt) shell script formatter.
 
+**Please note that I originally built this Docker image because that there wasn't an official one, but now there it is, and it also use the Dockerfile in this repository as the reference to create the official one, as you can see https://github.com/mvdan/sh/issues/68, this repository might not be actively maintained.**
+
 ## Usage
 
 ### Command line
