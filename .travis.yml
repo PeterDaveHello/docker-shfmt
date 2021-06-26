@@ -22,6 +22,16 @@ jobs:
 
     - stage: Test
       env:
+        - Test: hadolint
+      before_script:
+        - docker pull hadolint/hadolint
+      script:
+        - docker run --rm -i hadolint/hadolint < Dockerfile
+      services:
+        - docker
+
+    - stage: Test
+      env:
         - Test: Build Docker image
       language: generic
       script:
