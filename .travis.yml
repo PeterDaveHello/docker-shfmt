@@ -23,6 +23,7 @@ jobs:
     - stage: Test
       env:
         - Test: hadolint
+      language: minimal
       before_script:
         - docker pull hadolint/hadolint
       script:
@@ -33,7 +34,7 @@ jobs:
     - stage: Test
       env:
         - Test: Build Docker image
-      language: generic
+      language: minimal
       script:
         - docker build -t peterdavehello-shfmt-test .
         - docker run --rm -it peterdavehello-shfmt-test shfmt -version
