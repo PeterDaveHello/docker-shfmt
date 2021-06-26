@@ -1,9 +1,9 @@
 FROM golang:alpine
 
-ENV GOOS linux
-ENV CGO_ENABLED 0
-ENV GO111MODULE on
-ENV SHFMT_VERSION 3.3.0
+ARG GOOS=linux
+ARG CGO_ENABLED=0
+ARG GO111MODULE=on
+ARG SHFMT_VERSION=3.3.0
 
 RUN go get -u mvdan.cc/sh/v3/cmd/shfmt@v${SHFMT_VERSION}
 
