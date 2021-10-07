@@ -8,6 +8,7 @@ ARG GO111MODULE=on
 ARG SHFMT_VERSION
 
 RUN go get -u mvdan.cc/sh/v3/cmd/shfmt@v${SHFMT_VERSION}
+RUN shfmt --version
 
 FROM busybox:1 as release
 ARG SHFMT_VERSION
