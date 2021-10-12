@@ -27,7 +27,7 @@ jobs:
       before_script:
         - docker pull hadolint/hadolint
       script:
-        - docker run --rm -i hadolint/hadolint < Dockerfile
+        - docker run --rm -i hadolint/hadolint hadolint -t warning - < Dockerfile
       services:
         - docker
 
