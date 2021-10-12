@@ -1,6 +1,6 @@
 # shfmt
 
-[![Build Status](https://travis-ci.com/PeterDaveHello/docker-shfmt.svg?branch=master)](https://travis-ci.com/PeterDaveHello/docker-shfmt)
+[![Build Status](https://app.travis-ci.com/PeterDaveHello/docker-shfmt.svg?branch=master)](https://app.travis-ci.com/PeterDaveHello/docker-shfmt)
 [![Docker Hub pulls](https://img.shields.io/docker/pulls/peterdavehello/shfmt.svg)](https://hub.docker.com/r/peterdavehello/shfmt/)
 
 [![Docker Hub badge](https://dockeri.co/image/peterdavehello/shfmt)](https://hub.docker.com/r/peterdavehello/shfmt/)
