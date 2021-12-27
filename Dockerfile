@@ -1,4 +1,4 @@
-ARG SHFMT_VERSION=3.4.1
+ARG SHFMT_VERSION=3.4.2
 
 FROM golang:alpine as build
 
